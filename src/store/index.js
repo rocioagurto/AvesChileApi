@@ -10,7 +10,7 @@ function getFromStorage(key) {
   return JSON.parse(localStorage.getItem(key))
 }
 
-const BIRDS_API = 'http://aves.ninjas.cl/api/birds'
+const BIRDS_API = 'https://aves.ninjas.cl/api/birds'
 
 
 export default new Vuex.Store({
