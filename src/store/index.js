@@ -9,10 +9,6 @@ function setInStorage(key, obj) {
 function getFromStorage(key) {
   return JSON.parse(localStorage.getItem(key))
 }
-
-const BIRDS_API = 'https://aves.ninjas.cl/api/birds'
-
-
 export default new Vuex.Store({
   state: {
     currentUser: getFromStorage('user') || undefined,
@@ -42,7 +38,7 @@ export default new Vuex.Store({
     },
     getBirds({commit}){
       commit("SHOW_LOADING");
-      axios.get(`${BIRDS_API}`)
+      axios.get("https://aves.ninjas.cl/api/birds")
       .then(res => {
      console.log(res.data)
      let birds = res.data
@@ -56,7 +52,7 @@ export default new Vuex.Store({
 
 getCurrentBird({commit}, birdDetail){
   commit("SHOW_LOADING");
-  axios.get(`${birdDetail}`)
+  axios.get(birdDetail)
   .then(res  => {
     console.log(res.data)
     let currentBird = res.data
