@@ -11,7 +11,7 @@
                 <b-card-body class="card-body">
                 <b-card-img  :src="bird.images.main" class="imagen" ></b-card-img>
                 <audio class="audio" controls>
-                  <source :src="bird.audio.file"  type="audio/ogg"/>
+                  <source :src="bird.audio.file"  type="audio/mpeg"/>
                 </audio>
                 <b-card-text class="text-justify">
                   {{bird.didyouknow}}
