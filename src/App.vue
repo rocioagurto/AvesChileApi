@@ -1,14 +1,8 @@
 <template>
-<v-app>
-
-
-   <div id="app">
+  <b-main id="app">
     <nav-bar :brand="'Aves Chilenas'"/>
-    <router-view/>
-    <!-- <Footer/> -->
-  </div>
-  
-  </v-app>
+  <router-view/>
+  </b-main>
 </template>
 
 <script>

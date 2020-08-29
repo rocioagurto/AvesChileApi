@@ -1,15 +1,13 @@
 <template>
  <div>
-  <b-navbar toggleable="lg" class="navbar p-4 ">
+  <b-navbar toggleable="lg" class="navbar pr-3 pl-4">
     <b-navbar-brand href="#" class="text-uppercase"><router-link to="/" class="text-dark text-decoration-none" style="font-size: 24px;">
         {{ brand }}
         </router-link></b-navbar-brand>
     <b-navbar-toggle class="target" target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
- 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto menu ">
-     
         <b-nav-item href="#" to="/" class="mr-3" v-if="isLoggedIn">Aves</b-nav-item>
         <b-nav-item href="#" to="/login" class="mr-3 mb-sm-3 mb-md-0 text-white" v-if="!isLoggedIn">Iniciar sesión</b-nav-item>
         <b-nav-item href="#" class="mr-3 mb-sm-3 mb-md-0" v-if="isLoggedIn" @click="logout">Cerrar sesión</b-nav-item>

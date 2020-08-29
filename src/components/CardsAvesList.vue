@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-jumbotron  class="text-white" header="AVES CHILE" lead="Encuentra las aves de Chile aquí">
+    <b-jumbotron  class="text-white pl-4" header="AVES CHILE" lead="Encuentra las aves de Chile aquí">
         <b-form inline>
           <b-input
           id="inline-form-input-name"
@@ -9,7 +9,9 @@
           v-model="search"
           ></b-input>
         </b-form>
+       
     </b-jumbotron>
+  
     <b-overlay :show="show" rounded="lg" opacity="0.6" @hidden="onHidden">
       <b-container >
         <b-row>
