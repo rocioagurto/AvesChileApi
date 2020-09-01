@@ -9,7 +9,6 @@
           v-model="search"
           ></b-input>
         </b-form>
-       
     </b-jumbotron>
   
     <b-overlay :show="show" rounded="lg" opacity="0.6" @hidden="onHidden">
@@ -26,8 +25,11 @@
               </b-card-body>
               <b-button href="#" variant="dark" class="ml-3 mb-2"  v-b-modal.modal-scrollable @click="displayDialog(bird)">Ver mas</b-button>
             </b-card>
+           
           </b-col>
+           
         </b-row>
+        
         <modal-bird
         :modal="modal"
         :bird="currentBird"
@@ -35,6 +37,7 @@
         @close-modal="modal=false"
         >
        </modal-bird>
+     
       </b-container>
     </b-overlay>
   </div>
@@ -90,6 +93,8 @@ export default {
     background-image: url("/assets/img/buho1.jpg");
      background-size: cover;
     background-position: center;
-   
   }
+
+
+
 </style>

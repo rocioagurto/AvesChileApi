@@ -6,7 +6,9 @@
           <b-overlay :show="show" rounded="lg" opacity="0.6" @hidden="onHidden">
           <b-card v-if="bird.images"  bg-variant="light" text-variant="secondary">
             <b-card-title>
-              {{bird.name.spanish}} / {{bird.name.english}}/ {{bird.name.latin}}
+              Español: {{bird.name.spanish}} <br>
+              Inglés: {{bird.name.english}}<br>
+              Latín: {{bird.name.latin}}
               </b-card-title>
                 <b-card-body class="card-body">
                 <b-card-img  :src="bird.images.main" class="imagen" ></b-card-img>
